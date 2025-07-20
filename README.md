@@ -35,12 +35,12 @@ This became our chosen strategy due to its directness, effectiveness, and lower 
 
 ---
 
-### Approach 3: GAN-Inspired Adversarial Training
+### Approach 3: GAN-Inspired DSPy Training
 
 As a more experimental and ambitious strategy, we attempted to create a self-improving agent ecosystem inspired by Generative Adversarial Networks (GANs).
 
 * **Concept:** We envisioned two DSPy programs (a Q-Agent "Generator" and an A-Agent "Discriminator") training simultaneously. The Q-Agent would learn to generate questions that fool the A-Agent, while the A-Agent would learn to better answer them. The loss from one agent would be used to strengthen the other, creating a competitive loop that would, in theory, result in highly sophisticated agents.
-* **Outcome:** This proved to be the most challenging approach to implement. We encountered significant **GPU glitches** and found it difficult to reliably manage the adversarial loop using **LiteLLM with local models**. Due to these technical hurdles, we had to abandon this approach in favor of the more stable and directly controllable Prompt Tuning strategy.
+* **Outcome:** This proved to be the most challenging approach to implement. We encountered some GPU things and found it difficult to reliably manage the loop using **LiteLLM with local models**. Due to these technical hurdles, we had to abandon this approach in favor of the more stable and directly controllable Prompt Tuning strategy.
 
 ---
 
